@@ -1,0 +1,15 @@
+{"Productos" :[
+    {
+        "id": 0, 
+        "title": "Chamarra Pink", 
+        "price": 250, 
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUPAGmmm_nF83rB0WxsLsECxgUWqeGp5CoDw&usqp=CAU"
+    },
+    {
+        "id": 1, 
+        "title": "Chamarra Morada", 
+        "price": 350, 
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUPAGmmm_nF83rB0WxsLsECxgUWqeGp5CoDw&usqp=CAU"
+    }
+]
+}
