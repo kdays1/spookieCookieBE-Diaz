@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar un producto nuevo :)</title>
+</head>
+
+<body>
+    Products!
+    <br>
+    <br>
+    <!--  Get All Products -->
+    <form action="api/products" enctype="multipart/form-data" method="GET">
+        To <strong>get all products</strong>, press the button
+        <input type="submit" value="Get All Product" />
+    </form>
+    <br>
+    <br>
+    <!--  Get One Product -->
+    <form action="api/products" enctype="multipart/form-data" method="GET">
+        <label>
+            To <strong>get a product</strong>, please write the id
+        </label>
+        <input type="text" name="id" />
+        <br>
+        <input type="submit" value="Get Product" />
+    </form>
+    <br>
+    <br>
+    <!--  Add Product -->
+    <form action="api/products" enctype="multipart/form-data" method="POST">
+        To <strong>add a product</strong>, please write the following data
+        <br>
+        <label>Name : </label>
+        <input type="text" name="title" />
+        <br>
+        <label>Price : </label>
+        <input type="text" name="price" />
+        <br>
+        <label>URL to image : </label>
+        <input type="text" name="thumbnail" />
+        <br>
+        <input type="submit" value="Add Product" />
+    </form>
+    <br>
+    <br>
+    <!--  Update Product -->
+    <form action="api/products/" enctype="multipart/form-data" method="PUT">
+        To <strong>update a product</strong>, please enter the id
+        <input type="text" name="id" />
+        <br>
+        Now you can enter the data in the parameters you want to modify
+        <br>
+        <label>Name : </label>
+        <input type="text" name="title" />
+        <br>
+        <label>Price : </label>
+        <input type="text" name="price" />
+        <br>
+        <label>URL to image : </label>
+        <input type="text" name="thumbnail" />
+        <br>
+        <input type="submit" value="Update Product" />
+    </form>
+    <br>
+    <br>
+    <!-- Delete Product  -->
+    <form action="api/products/:id" enctype="multipart/form-data" method="DELETE">
+        To <strong>delete a product</strong>, please enter the id
+        <input type="text" name="id" />
+        <br>
+        <input type="submit" value="Delete Product" />
+    </form>
+</body>
+
+</html>

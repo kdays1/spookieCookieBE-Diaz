@@ -4,19 +4,7 @@
             "title" :"Chamarra Rosa",
             "price" :"200",
             "thumbnail" : "https://www.google.com/search?q=chamarra+rosa&tbm=isch&ved=2ahUKEwj4xI7244H7AhWwg2oFHbfpDpMQ2-cCegQIABAA&oq=chamarra+&gs_lcp=CgNpbWcQARgBMgQIIxAnMgQIIxAnMggIABCABBCxAzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzILCAAQgAQQsQMQgwEyBQgAEIAEMgUIABCABDILCAAQgAQQsQMQgwE6BAgAEEM6CAgAELEDEIMBOgoIABCxAxCDARBDOgcIABCxAxBDUK0HWIgPYNM5aABwAHgAgAGNAYgB9QiSAQQwLjEwmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=ajFbY_jnD7CHqtsPt9O7mAk&bih=656&biw=1396&rlz=1C1CHBF_esMX810MX810",
-            "id" :0
-        },
-        {
-            "title" :"Chamarra Azul",
-            "price" :"250",
-            "thumbnail" : "https://www.google.com/search?q=chamarra+azul&tbm=isch&ved=2ahUKEwjxu5D744H7AhXUnWoFHZBuDLUQ2-cCegQIABAA&oq=chamarra+azul&gs_lcp=CgNpbWcQAzIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoECAAQQzoICAAQgAQQsQM6CwgAEIAEELEDEIMBUI0DWOQOYIcSaABwAHgAgAGqAYgB-wiSAQMwLjmYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=dDFbY_GxL9S7qtsPkN2xqAs&bih=656&biw=1396&rlz=1C1CHBF_esMX810MX810",
             "id" :1
-        },
-        {
-            "title" :"Chamarra Morada",
-            "price" :"250",
-            "thumbnail" : "https://www.google.com/search?q=chamarra+morada&tbm=isch&ved=2ahUKEwio0YGQ5IH7AhUDKd8KHZLNCZUQ2-cCegQIABAA&oq=chamarra+morada&gs_lcp=CgNpbWcQAzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIGCAAQBRAeMgYIABAFEB4yBggAEAUQHjIGCAAQCBAeUABYAGAAaABwAHgAgAFuiAFukgEDMC4xmAEAqgELZ3dzLXdpei1pbWc&sclient=img&ei=oDFbY6iBI4PS_AaSm6eoCQ&bih=656&biw=1396&rlz=1C1CHBF_esMX810MX810",
-            "id" :2
         }
     ]
 }
