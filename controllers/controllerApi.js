@@ -14,14 +14,14 @@ function allProducts (req, res) {
     res.json(productsPromise)
 }
 
-function oneProduct ({params : {id}}, res) {
-    const productPromise = productsInStorage.filter(x => x.id == id);
+function oneProduct ({body, params : {id}}, res) {
+    const productPromise = productsInStorage.find(x => x.id == id);
     if (!productPromise){
         res.json({error: 'producto no encontrado'})
         res.status(404)
     }
     // res.json(JSON.stringify({productPromise}))
-    res.json(productPromise.title)
+    res.send(productPromise)
 }
 
 function addProduct (req, res) {
@@ -35,7 +35,7 @@ function addProduct (req, res) {
 }
 
 function updateProduct ({body, params : {id}}, res) {
-    let product2Update = productsInStorage.findIndex(x => x.id == id)
+    const product2Update = productsInStorage.findIndex(x => x.id == id)
     // productsInStorage = productsInStorage.filter(x => x.id != id)
     if (product2Update == -1) {
         res.status(404)
@@ -49,9 +49,15 @@ function updateProduct ({body, params : {id}}, res) {
     }
 }
 
-function deleteProduct (req, res) {
-    productsInStorage = productsInStorage.filter(x => x.id != theId)
-    res.send('The product was deleted')
+function deleteProduct ({params : {id}}, res) {
+    const deleteProductIndex = productsInStorage.findIndex(c => c.id === id);
+    if (deleteProductIndex === -1) {
+        res.status(404);
+        res.json({ mensaje: `The product with the id (${id}) does not exists` });
+    } else {
+        const deletedProduct = productsInStorage.splice(deleteProductIndex, 1);
+        res.json(deletedProduct[0]);
+    }
 }
 
 
