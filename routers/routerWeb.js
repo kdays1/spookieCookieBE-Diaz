@@ -1,8 +1,11 @@
 const express = require('express');
-const {controladorGetForm } = require('../controllers/controllerWeb.js')
+const { addProduct } = require('../controllers/controllerApi.js');
+const {productsForm, productsInStorage } = require('../controllers/controllerWeb.js')
 
 const routerWeb = express.Router()
 
-routerWeb.get('/', controladorGetForm)
+routerWeb.get('/', productsInStorage);
+routerWeb.post('/', addProduct);
+routerWeb.get('/form', productsForm);
 
 exports.routerWeb = routerWeb;

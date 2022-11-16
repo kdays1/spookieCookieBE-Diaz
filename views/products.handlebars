@@ -1,0 +1,29 @@
+{{#if areProducts}}
+<table>
+    <tr style="color: blueviolet;">
+        <th>Product</th>
+        <th>Price</th>
+        <th>Photo</th>
+    </tr>
+    {{#each products}}
+    <tr>
+        <td>
+            {{this.title}}
+        </td>
+        <td>
+            {{this.price}}
+        </td>
+        <td>
+            {{this.thumbnail}}
+        </td>
+    </tr>
+    {{/each}}
+</table>
+{{else}}
+<h3>No hay productos</h3>
+{{/if}}
+<br>
+<br>
+<a href="/productos/form">
+    <input type="submit" value="Go to Forms">
+</a>

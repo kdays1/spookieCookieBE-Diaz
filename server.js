@@ -1,15 +1,17 @@
 const express = require('express')
 const { routerApi }= require('./routers/routerApi.js')
 const { routerWeb }= require('./routers/routerWeb.js')
+const { engine } = require ('express-handlebars')
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-app.use(express.static('public'))
 // app.use(express.static('public'))
+app.engine('handlebars', engine())
 
+app.set('view engine', 'handlebars')
 
-app.use('/', routerWeb)
+app.use('/productos', routerWeb)
 app.use('/api/products', routerApi)
 
 
