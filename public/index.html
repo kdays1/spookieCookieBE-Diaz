@@ -3,21 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Agregar un producto nuevo :)</title>
+    <title>Products :)</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-    Products!
-    <br>
-    <br>
-    <!--  Get All Products -->
+    <h1>Welcom to the Products Page</h1>
+    <h2>Products Form</h2>
+     <!-- Get All Products
     <form action="api/products" enctype="multipart/form-data" method="GET">
         To <strong>get all products</strong>, press the button
         <input type="submit" value="Get All Product" />
     </form>
     <br>
     <br>
-    <!--  Get One Product -->
+     Get One Product
     <form action="api/products" enctype="multipart/form-data" method="GET">
         <label>
             To <strong>get a product</strong>, please write the id
@@ -27,9 +30,10 @@
         <input type="submit" value="Get Product" />
     </form>
     <br>
-    <br>
+    <br> -->
     <!--  Add Product -->
-    <form action="api/products" enctype="multipart/form-data" method="POST">
+    <!-- action="api/products" enctype="multipart/form-data" method="POST" -->
+    <form id="formAddProduct" >
         To <strong>add a product</strong>, please write the following data
         <br>
         <label>Name : </label>
@@ -42,10 +46,12 @@
         <input type="text" name="thumbnail" />
         <br>
         <input type="submit" value="Add Product" />
+        <!-- <button >Add product</button> -->
     </form>
     <br>
     <br>
-    <!--  Update Product -->
+    <div id="products"></div>
+     <!-- Update Product
     <form action="api/products/" enctype="multipart/form-data" method="PUT">
         To <strong>update a product</strong>, please enter the id
         <input type="text" name="id" />
@@ -65,13 +71,14 @@
     </form>
     <br>
     <br>
-    <!-- Delete Product  -->
+    Delete Product 
     <form action="api/products/:id" enctype="multipart/form-data" method="DELETE">
         To <strong>delete a product</strong>, please enter the id
         <input type="text" name="id" />
         <br>
         <input type="submit" value="Delete Product" />
-    </form>
+    </form> -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
