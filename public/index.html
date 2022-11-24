@@ -33,51 +33,64 @@
     <br> -->
     <!--  Add Product -->
     <!-- action="api/products" enctype="multipart/form-data" method="POST" -->
-    <form id="formAddProduct" >
-        To <strong>add a product</strong>, please write the following data
+    <container>
+        <form id="formAddProduct" >
+            To <strong>add a product</strong>, please write the following data
+            <br>
+            <label>Name : </label>
+            <input type="text" name="title" />
+            <br>
+            <label>Price : </label>
+            <input type="text" name="price" />
+            <br>
+            <label>Image URL : </label>
+            <input type="text" name="thumbnail" />
+            <br>
+            <input type="submit" value="Add Product" />
+            <!-- <button >Add product</button> -->
+        </form>
         <br>
-        <label>Name : </label>
-        <input type="text" name="title" />
+        <div id="products"></div>
+        <!-- Update Product
+        <form action="api/products/" enctype="multipart/form-data" method="PUT">
+            To <strong>update a product</strong>, please enter the id
+            <input type="text" name="id" />
+            <br>
+            Now you can enter the data in the parameters you want to modify
+            <br>
+            <label>Name : </label>
+            <input type="text" name="title" />
+            <br>
+            <label>Price : </label>
+            <input type="text" name="price" />
+            <br>
+            <label>URL to image : </label>
+            <input type="text" name="thumbnail" />
+            <br>
+            <input type="submit" value="Update Product" />
+        </form>
         <br>
-        <label>Price : </label>
-        <input type="text" name="price" />
         <br>
-        <label>URL to image : </label>
-        <input type="text" name="thumbnail" />
+        Delete Product 
+        <form action="api/products/:id" enctype="multipart/form-data" method="DELETE">
+            To <strong>delete a product</strong>, please enter the id
+            <input type="text" name="id" />
+            <br>
+            <input type="submit" value="Delete Product" />
+        </form> -->
+    </container>
+        <hr>
+    <container>
+        <h2> Message us!</h2>
+        <label for="user">Username:</label>
+        <input id="user" type="text" placeholder="Name">
         <br>
-        <input type="submit" value="Add Product" />
-        <!-- <button >Add product</button> -->
-    </form>
-    <br>
-    <br>
-    <div id="products"></div>
-     <!-- Update Product
-    <form action="api/products/" enctype="multipart/form-data" method="PUT">
-        To <strong>update a product</strong>, please enter the id
-        <input type="text" name="id" />
+        <label for="userMessage">Content:</label>
+        <input id="userMessage" type="text" placeholder="Write here your message">
         <br>
-        Now you can enter the data in the parameters you want to modify
-        <br>
-        <label>Name : </label>
-        <input type="text" name="title" />
-        <br>
-        <label>Price : </label>
-        <input type="text" name="price" />
-        <br>
-        <label>URL to image : </label>
-        <input type="text" name="thumbnail" />
-        <br>
-        <input type="submit" value="Update Product" />
-    </form>
-    <br>
-    <br>
-    Delete Product 
-    <form action="api/products/:id" enctype="multipart/form-data" method="DELETE">
-        To <strong>delete a product</strong>, please enter the id
-        <input type="text" name="id" />
-        <br>
-        <input type="submit" value="Delete Product" />
-    </form> -->
+        <button id="sendButton">Send</button>
+        <div id="messages"></div>
+    </container>
     <script src="js/main.js"></script>
 </body>
 

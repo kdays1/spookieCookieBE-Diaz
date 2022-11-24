@@ -1,5 +1,7 @@
 const socket = io();
 
+
+//Products Form
 const formAddProduct = document.getElementById('formAddProduct')
 formAddProduct.addEventListener('submit', e => {
     e.preventDefault()
@@ -15,7 +17,6 @@ formAddProduct.addEventListener('submit', e => {
     formAddProduct.reset()
 })
 
-
 socket.on('products', updatingProducts);
 
 async function updatingProducts(products) {
@@ -30,3 +31,42 @@ async function updatingProducts(products) {
 
     document.getElementById('products').innerHTML = html
 }
+
+//Chat messages
+
+const sendMessage = document.getElementById('sendButton')
+sendMessage.addEventListener('click', e => {
+    const user = document.getElementById('user')
+    const userMessage = document.getElementById('userMessage')
+    if (user.value && userMessage.value) {
+        const message = {
+            user: user.value,
+            content: userMessage.value
+        }
+        socket.emit('newMessage', message)
+    } else {
+        alert('You need to write your username and a message')
+    }
+})
+
+function renderMessages(messages) {
+    console.log(messages)
+    const messagesInbox = messages.map(({user, content, date}) => {
+        return `<li>${date} :: ${user} :: ${content}</li>`
+    })
+
+    const messagesHtml = `
+    <ul>
+        ${messagesInbox.join('\n')}
+    </ul>`
+
+    const messagesRender = document.getElementById('messages')
+    messagesRender.innerHTML = messagesHtml
+}
+
+socket.on('messages', messages => {
+    renderMessages(messages)
+})
+
+
+

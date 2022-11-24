@@ -17,13 +17,24 @@ const io = new Socket(httpServer)
 // app.use('/api/products', routerApi)
 
 const products = []
+const messages = []
 
 io.on('connection', (socket) => {
+    //Products Form
     socket.emit('products', products)
 
     socket.on('addProduct', producto => {
         products.push(producto)
         io.sockets.emit('products', products)
+    })
+
+    //Chat Messages
+    socket.emit('messages', messages);
+    socket.on('newMessage', message => {
+        message.date = new Date().toLocaleString()
+        messages.push(message)
+        console.log(messages)
+        io.sockets.emit('messages', messages)
     })
 })
 
