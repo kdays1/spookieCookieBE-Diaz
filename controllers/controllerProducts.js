@@ -2,8 +2,9 @@ const { randomUUID } = require('crypto')
 
 const productsInStorage = [
     {
-        "title" :"Chamarra Rosa",
+        "name" :"Chamarra Rosa",
         "price" :"200",
+        "description" : "chamarra de moda, afelpada, lisa y color rosa",
         "thumbnail" : "https://www.google.com/search?q=chamarra+rosa&tbm=isch&ved=2ahUKEwj4xI7244H7AhWwg2oFHbfpDpMQ2-cCegQIABAA&oq=chamarra+&gs_lcp=CgNpbWcQARgBMgQIIxAnMgQIIxAnMggIABCABBCxAzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzILCAAQgAQQsQMQgwEyBQgAEIAEMgUIABCABDILCAAQgAQQsQMQgwE6BAgAEEM6CAgAELEDEIMBOgoIABCxAxCDARBDOgcIABCxAxBDUK0HWIgPYNM5aABwAHgAgAGNAYgB9QiSAQQwLjEwmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=ajFbY_jnD7CHqtsPt9O7mAk&bih=656&biw=1396&rlz=1C1CHBF_esMX810MX810",
         "id" : "25"
     }
